@@ -50,6 +50,7 @@
 		#menu {
 			background: url("media/SkyCloudBackground01.png");
 			background-size: 100% 100%;
+			overflow: hidden;
 			font-family: 'action_manregular';
 		}
 
@@ -97,6 +98,10 @@
 			display: block;
 		}
 
+		#menu.showend .spinner {
+			display: block;
+		}
+
 		#menu.showend .start {
 			display: none;
 		}
@@ -133,6 +138,24 @@
 			position: relative;
 			float: left;
 		}
+
+.spinner {
+	display: none;
+	position: absolute;
+	background: url("media/LevelFinishArt02.png");
+	background-size: 100% 100%;
+	width: 1600px;
+	height: 1200px;
+	left: -400px;
+	top: -300px;
+    -webkit-animation: rotation 5s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+    from {-webkit-transform: rotate(0deg);}
+    to   {-webkit-transform: rotate(359deg);}
+}
+
 
 		.boost-fill {
 			height: 100%;
@@ -178,6 +201,8 @@ background-image: -webkit-gradient(
 </head>
 <body>
 	<div id="menu">
+		<div class="spinner">
+		</div>
 		<div class="title"></div>
 		<div class="start">
 			<div class="button-container">
