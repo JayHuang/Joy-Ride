@@ -21,7 +21,7 @@
 			margin: auto;
 		}
 
-		#menu {
+		#menu, #hudoverlay {
 			position: absolute;
 			width: 800px;
 			height: 600px;
@@ -31,9 +31,8 @@
 			bottom: 0;
 			margin: auto;
 			background: black;
-			z-index: 9000;
+			z-index: 900;
 		}
-
 		.title {
 			position: absolute;
 			background: url("media/title.png");
@@ -58,20 +57,34 @@
 		.play {
 
 		}
-	</style>
 
-	<script type="text/javascript" src="lib/impact/impact.js"></script>
-	<script> 
-		var random = Math.random(); 
-		document.write('<script type="text/javascript" src="lib/game/main.js?'+random+'"><\/script>');
-	</script>
-</head>
-<body>
-	<div id="menu">
-		<div class="title"></div>
-		<div class="button play">PLAY</div>
-	</div>
-	<canvas id="canvas"></canvas>
+		#hudoverlay {
+			background: none;
+			z-index: 899;
+		}
+
+		.boost {
+			padding: 20px;
+		}
+
+		.boost-bar {
+			width: 150px;
+			height: 20px;
+			border: 1px solid white;
+			position: relative;
+		}
+
+		.boost-fill {
+			height: 100%;
+			width: 70%;
+			background: red;
+			position: absolute;
+		}
+
+		.label {
+			position: absolute;
+		}
+	</style>
 	<script src="js/jquery.js"></script>
 	<script type="text/javascript">
 	$(function(){
@@ -85,5 +98,26 @@
 		}); 
 	});
 	</script>
+	<script type="text/javascript" src="lib/impact/impact.js"></script>
+	<script> 
+		var random = Math.random(); 
+		document.write('<script type="text/javascript" src="lib/game/main.js?'+random+'"><\/script>');
+	</script>
+</head>
+<body>
+	<div id="menu">
+		<div class="title"></div>
+		<div class="button play">PLAY</div>
+	</div>
+	<div id="hudoverlay">
+		<div class="boost">
+			Boost: 
+			<div class="boost-bar">
+				<div class="boost-fill"></div>
+				<span class="label">100%</span>
+			</div>
+		</div>
+	</div>
+	<canvas id="canvas"></canvas>
 </body>
 </html>
