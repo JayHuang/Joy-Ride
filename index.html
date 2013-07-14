@@ -67,9 +67,22 @@
 			padding: 20px;
 		}
 
+		.boost {
+			float: left;
+		}
+
 		.score {
 			padding: 20px;
 			float: right;
+		}
+
+		.fuel {
+			width: 48px;
+			height: 48px;
+			background: url("media/Fuel_Sprite01.png");
+			background-size: 100% 100%; 
+			position: relative;
+			float: left;
 		}
 
 		.boost-bar {
@@ -77,12 +90,13 @@
 			height: 20px;
 			border: 1px solid white;
 			position: relative;
+			float: left;
 		}
 
 		.boost-fill {
 			height: 100%;
 			width: 70%;
-			background: red;
+			background: gray;
 			position: absolute;
 		}
 
@@ -119,6 +133,7 @@
 			Score: &nbsp; <span class="score-val">0</span>
 		</div>
 		<div class="boost">
+			<div class="fuel"></div>
 			Boost: 
 			<div class="boost-bar">
 				<div class="boost-fill"></div>
