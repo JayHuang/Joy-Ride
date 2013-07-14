@@ -80,6 +80,7 @@
 		}
 
 		#hudoverlay {
+			font-family: 'action_manregular';
 			background: none;
 			z-index: 899;
 		}
@@ -96,14 +97,14 @@
 			font-family: 'action_manregular';
 			padding: 20px;
 			float: right;
-			width: 200px;
+			width: 150px;
 			font-size: 25px;
 		}
 
 		.fuel {
-			width: 48px;
-			height: 48px;
-			background: url("media/Fuel_Sprite01.png");
+			width: 28px;
+			height: 57px;
+			background: url("media/hudfuel.png");
 			background-size: 100% 100%; 
 			position: relative;
 			float: left;
@@ -116,7 +117,7 @@
 		.boost-bar {
 			width: 150px;
 			height: 20px;
-			border: 1px solid white;
+			border: 3px solid #f1bb16;
 			position: relative;
 			float: left;
 		}
@@ -124,7 +125,19 @@
 		.boost-fill {
 			height: 100%;
 			width: 70%;
-			background: gray;
+background-image: linear-gradient(right , rgb(255,163,24) 35%, rgb(243,107,33) 73%);
+background-image: -o-linear-gradient(right , rgb(255,163,24) 35%, rgb(243,107,33) 73%);
+background-image: -moz-linear-gradient(right , rgb(255,163,24) 35%, rgb(243,107,33) 73%);
+background-image: -webkit-linear-gradient(right , rgb(255,163,24) 35%, rgb(243,107,33) 73%);
+background-image: -ms-linear-gradient(right , rgb(255,163,24) 35%, rgb(243,107,33) 73%);
+
+background-image: -webkit-gradient(
+	linear,
+	right top,
+	left top,
+	color-stop(0.35, rgb(255,163,24)),
+	color-stop(0.73, rgb(243,107,33))
+);
 			position: absolute;
 		}
 
