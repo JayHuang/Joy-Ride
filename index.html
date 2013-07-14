@@ -3,6 +3,19 @@
 <head>
 	<title>Impact Game</title>
 	<style type="text/css">
+@font-face {
+    font-family: 'action_manregular';
+    src: url('fonts/actionman/Action_Man-webfont.eot');
+    src: url('fonts/actionman/Action_Man-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/actionman/Action_Man-webfont.woff') format('woff'),
+         url('fonts/actionman/Action_Man-webfont.ttf') format('truetype'),
+         url('fonts/actionman/Action_Man-webfont.svg#action_manregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
 		html,body {
 			background-color: #333;
 			color: #fff;
@@ -35,42 +48,39 @@
 		}
 
 		#menu {
-			background: url("media/SkyBackground02.png");
+			background: url("media/SkyCloudBackground01.png");
 			background-size: 100% 100%;
+			font-family: 'action_manregular';
 		}
+
 		.title {
 			position: absolute;
-			background: url("media/title.png");
-			width: 320px;
-			height: 129px;
+			background: url("media/TitleArt02.png");
+			width: 600px;
+			height: 251px;
 			left: 50%;
-			margin-left: -160px;
-			top: 30px;
+			margin-left: -300px;
+			top: 50%;
+			top: 100px;
 			background-size: 100% 100%;
+			position: relative;
 		}
 
 		.button-container {
-			width: 256px;
+			width: 100%;
 			height: 195px;
 			position: relative;
-			top: 50%;
-			left: 50%;
-			margin-left: -128px;
-			margin-top: -97.5px;
+			top: 150px;
+			text-align: center; 
 		}
 
-		.button {
-			width: 256px;
-			height: 65px;
-		}
 		.play {
-			width: 256px;
-			height: 65px;
-			background: url("media/PlayButtonArt01.png");
-			background-size: 100% 100%; 
+			color: #510b0b;
+			font-size: 80px;
 		}
 
 		#hudoverlay {
+			font-family: 'action_manregular';
 			background: none;
 			z-index: 899;
 		}
@@ -84,23 +94,30 @@
 		}
 
 		.score {
+			font-family: 'action_manregular';
 			padding: 20px;
 			float: right;
+			width: 150px;
+			font-size: 25px;
 		}
 
 		.fuel {
-			width: 48px;
-			height: 48px;
-			background: url("media/Fuel_Sprite01.png");
+			width: 28px;
+			height: 57px;
+			background: url("media/hudfuel.png");
 			background-size: 100% 100%; 
 			position: relative;
 			float: left;
 		}
 
+		.score-val {
+			text-align: right;
+		}
+
 		.boost-bar {
 			width: 150px;
 			height: 20px;
-			border: 1px solid white;
+			border: 3px solid #f1bb16;
 			position: relative;
 			float: left;
 		}
@@ -108,7 +125,19 @@
 		.boost-fill {
 			height: 100%;
 			width: 70%;
-			background: gray;
+background-image: linear-gradient(right , rgb(255,163,24) 35%, rgb(243,107,33) 73%);
+background-image: -o-linear-gradient(right , rgb(255,163,24) 35%, rgb(243,107,33) 73%);
+background-image: -moz-linear-gradient(right , rgb(255,163,24) 35%, rgb(243,107,33) 73%);
+background-image: -webkit-linear-gradient(right , rgb(255,163,24) 35%, rgb(243,107,33) 73%);
+background-image: -ms-linear-gradient(right , rgb(255,163,24) 35%, rgb(243,107,33) 73%);
+
+background-image: -webkit-gradient(
+	linear,
+	right top,
+	left top,
+	color-stop(0.35, rgb(255,163,24)),
+	color-stop(0.73, rgb(243,107,33))
+);
 			position: absolute;
 		}
 
@@ -139,7 +168,7 @@
 	<div id="menu">
 		<div class="title"></div>
 		<div class="button-container">
-			<div class="button play"></div>
+			<div class="button play">Play</div>
 			<div class="button controls"></div>
 			<div class="button credits"></div>
 		</div>
