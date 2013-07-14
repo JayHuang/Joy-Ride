@@ -20,6 +20,44 @@
 			bottom: 0;
 			margin: auto;
 		}
+
+		#menu {
+			position: absolute;
+			width: 800px;
+			height: 600px;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+			background: black;
+			z-index: 9000;
+		}
+
+		.title {
+			position: absolute;
+			background: url("media/title.png");
+			width: 320px;
+			height: 129px;
+			left: 50%;
+			margin-left: -160px;
+			top: 30px;
+			background-size: 100% 100%;
+		}
+		.button {
+			width: 150px;
+			height: 75px;
+			color: white;
+			border: 1px solid orange;
+			position: absolute;
+			top: 50%;
+			margin-top: -37.5px;
+			left: 50%;
+			margin-left: -75px;
+		}
+		.play {
+
+		}
 	</style>
 
 	<script type="text/javascript" src="lib/impact/impact.js"></script>
@@ -29,6 +67,24 @@
 	</script>
 </head>
 <body>
+	<div id="menu">
+		<div class="title"></div>
+		<div class="button play">PLAY</div>
+	</div>
 	<canvas id="canvas"></canvas>
+	<script src="js/jquery.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		$(document).ready(function(){
+			$('.play').on('click', function(){
+				$('#menu').hide(); 
+				setTimeout(function(){
+					ig.game.start(); 
+				})
+				console.log(ig.game);
+			});
+		}); 
+	});
+	</script>
 </body>
 </html>
