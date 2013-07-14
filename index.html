@@ -63,8 +63,13 @@
 			z-index: 899;
 		}
 
-		.boost {
+		.boost, .score {
 			padding: 20px;
+		}
+
+		.score {
+			padding: 20px;
+			float: right;
 		}
 
 		.boost-bar {
@@ -110,6 +115,9 @@
 		<div class="button play">PLAY</div>
 	</div>
 	<div id="hudoverlay">
+		<div class="score">
+			Score: &nbsp; <span class="score-val">0</span>
+		</div>
 		<div class="boost">
 			Boost: 
 			<div class="boost-bar">
