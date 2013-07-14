@@ -220,11 +220,11 @@ background-image: -webkit-gradient(
 		$(document).ready(function(){
 			$('.credits').on('click', function() {
 				$('#credits').show(); 
-			}
+			}); 
 
 			$('.back').on('click', function() {
 				$('#credits').hide(); 
-			}
+			}); 
 			$('.play').on('click', function(){
 				$('#menu').removeClass('showend').hide(); 
 				setTimeout(function(){
@@ -250,6 +250,7 @@ background-image: -webkit-gradient(
 		<div class="start">
 			<div class="button-container">
 				<div class="button play">Play</div>
+				<div class="button credits">Credits</div>
 			</div>
 		</div>
 
