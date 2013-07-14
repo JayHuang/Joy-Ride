@@ -43,19 +43,26 @@
 			top: 30px;
 			background-size: 100% 100%;
 		}
-		.button {
-			width: 150px;
-			height: 75px;
-			color: white;
-			border: 1px solid orange;
-			position: absolute;
+
+		.button-container {
+			width: 256px;
+			height: 195px;
+			position: relative;
 			top: 50%;
-			margin-top: -37.5px;
 			left: 50%;
-			margin-left: -75px;
+			margin-left: -128px;
+			margin-top: -97.5px;
+		}
+
+		.button {
+			width: 256px;
+			height: 65px;
 		}
 		.play {
-
+			width: 256px;
+			height: 65px;
+			background: url("media/PlayButtonArt01.png");
+			background-size: 100% 100%; 
 		}
 
 		#hudoverlay {
@@ -126,7 +133,11 @@
 <body>
 	<div id="menu">
 		<div class="title"></div>
-		<div class="button play">PLAY</div>
+		<div class="button-container">
+			<div class="button play"></div>
+			<div class="button controls"></div>
+			<div class="button credits"></div>
+		</div>
 	</div>
 	<div id="hudoverlay">
 		<div class="score">
