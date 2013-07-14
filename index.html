@@ -74,7 +74,7 @@
 			text-align: center; 
 		}
 
-		.play {
+		.button {
 			color: #510b0b;
 			font-size: 80px;
 		}
@@ -91,6 +91,18 @@
 
 		.boost {
 			float: left;
+		}
+
+		#menu.showend .end {
+			display: block;
+		}
+
+		#menu.showend .start {
+			display: none;
+		}
+
+		.end {
+			display: none;
 		}
 
 		.score {
@@ -150,7 +162,7 @@ background-image: -webkit-gradient(
 	$(function(){
 		$(document).ready(function(){
 			$('.play').on('click', function(){
-				$('#menu').hide(); 
+				$('#menu').removeClass('showend').hide(); 
 				setTimeout(function(){
 					ig.game.start(); 
 				})
@@ -167,10 +179,17 @@ background-image: -webkit-gradient(
 <body>
 	<div id="menu">
 		<div class="title"></div>
-		<div class="button-container">
-			<div class="button play">Play</div>
-			<div class="button controls"></div>
-			<div class="button credits"></div>
+		<div class="start">
+			<div class="button-container">
+				<div class="button play">Play</div>
+			</div>
+		</div>
+
+		<div class="end">
+			<div class="button-container">
+				<div class="button play">Replay</div>
+				<div class="button credits">Credits</div>
+			</div>
 		</div>
 	</div>
 	<div id="hudoverlay">
