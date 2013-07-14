@@ -58,6 +58,8 @@
 			display: none;
 		}
 
+
+
 		.title {
 			position: absolute;
 			background: url("media/TitleArt02.png");
@@ -119,7 +121,7 @@
 			font-family: 'action_manregular';
 			padding: 20px;
 			float: right;
-			width: 150px;
+			width: 200px;
 			font-size: 25px;
 		}
 
@@ -216,6 +218,13 @@ background-image: -webkit-gradient(
 	<script type="text/javascript">
 	$(function(){
 		$(document).ready(function(){
+			$('.credits').on('click', function() {
+				$('#credits').show(); 
+			}
+
+			$('.back').on('click', function() {
+				$('#credits').hide(); 
+			}
 			$('.play').on('click', function(){
 				$('#menu').removeClass('showend').hide(); 
 				setTimeout(function(){
@@ -270,6 +279,22 @@ background-image: -webkit-gradient(
 		</div>
 	</div>
 	<div id="credits">
+			<h2> Developers</h2>
+			&nbsp;&nbsp;&nbsp;Jonathan Chu <br />
+			&nbsp;&nbsp;&nbsp;Romel Dris <br />
+			&nbsp;&nbsp;&nbsp;Jay Huang <br />
+			&nbsp;&nbsp;&nbsp;Olivia Zhang <br />
+
+			<h2> Artist</h2>
+			&nbsp;&nbsp;&nbsp;Paolo Alvarez <br />
+			&nbsp;&nbsp;&nbsp;Kevin Odulio <br />
+			&nbsp;&nbsp;&nbsp;Mark Rito <br />
+
+			<h2> Story</h2>
+			&nbsp;&nbsp;&nbsp;JenJen Francis <br />
+
+			<div class="button back">Back</div>
+
 	</div>
 	<canvas id="canvas"></canvas>
 </body>
