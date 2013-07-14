@@ -219,7 +219,9 @@ background-image: -webkit-gradient(
 			$('.play').on('click', function(){
 				$('#menu').removeClass('showend').hide(); 
 				setTimeout(function(){
-					ig.game.start(); 
+					if (ig.game) {
+						ig.game.start(); 
+					}
 				})
 			});
 		}); 
