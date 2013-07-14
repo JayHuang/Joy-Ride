@@ -3,6 +3,19 @@
 <head>
 	<title>Impact Game</title>
 	<style type="text/css">
+@font-face {
+    font-family: 'action_manregular';
+    src: url('fonts/actionman/Action_Man-webfont.eot');
+    src: url('fonts/actionman/Action_Man-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/actionman/Action_Man-webfont.woff') format('woff'),
+         url('fonts/actionman/Action_Man-webfont.ttf') format('truetype'),
+         url('fonts/actionman/Action_Man-webfont.svg#action_manregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
 		html,body {
 			background-color: #333;
 			color: #fff;
@@ -35,39 +48,35 @@
 		}
 
 		#menu {
-			background: url("media/SkyBackground02.png");
+			background: url("media/SkyCloudBackground01.png");
 			background-size: 100% 100%;
+			font-family: 'action_manregular';
 		}
+
 		.title {
 			position: absolute;
-			background: url("media/title.png");
-			width: 320px;
-			height: 129px;
+			background: url("media/TitleArt02.png");
+			width: 600px;
+			height: 251px;
 			left: 50%;
-			margin-left: -160px;
-			top: 30px;
+			margin-left: -300px;
+			top: 50%;
+			top: 100px;
 			background-size: 100% 100%;
+			position: relative;
 		}
 
 		.button-container {
-			width: 256px;
+			width: 100%;
 			height: 195px;
 			position: relative;
-			top: 50%;
-			left: 50%;
-			margin-left: -128px;
-			margin-top: -97.5px;
+			top: 150px;
+			text-align: center; 
 		}
 
-		.button {
-			width: 256px;
-			height: 65px;
-		}
 		.play {
-			width: 256px;
-			height: 65px;
-			background: url("media/PlayButtonArt01.png");
-			background-size: 100% 100%; 
+			color: #510b0b;
+			font-size: 80px;
 		}
 
 		#hudoverlay {
@@ -84,8 +93,11 @@
 		}
 
 		.score {
+			font-family: 'action_manregular';
 			padding: 20px;
 			float: right;
+			width: 200px;
+			font-size: 25px;
 		}
 
 		.fuel {
@@ -95,6 +107,10 @@
 			background-size: 100% 100%; 
 			position: relative;
 			float: left;
+		}
+
+		.score-val {
+			text-align: right;
 		}
 
 		.boost-bar {
@@ -139,7 +155,7 @@
 	<div id="menu">
 		<div class="title"></div>
 		<div class="button-container">
-			<div class="button play"></div>
+			<div class="button play">Play</div>
 			<div class="button controls"></div>
 			<div class="button credits"></div>
 		</div>
