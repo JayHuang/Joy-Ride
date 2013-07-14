@@ -50,6 +50,7 @@
 		#menu {
 			background: url("media/SkyCloudBackground01.png");
 			background-size: 100% 100%;
+			overflow: hidden;
 			font-family: 'action_manregular';
 		}
 
@@ -74,7 +75,7 @@
 			text-align: center; 
 		}
 
-		.play {
+		.button {
 			color: #510b0b;
 			font-size: 80px;
 		}
@@ -91,6 +92,22 @@
 
 		.boost {
 			float: left;
+		}
+
+		#menu.showend .end {
+			display: block;
+		}
+
+		#menu.showend .spinner {
+			display: block;
+		}
+
+		#menu.showend .start {
+			display: none;
+		}
+
+		.end {
+			display: none;
 		}
 
 		.score {
@@ -122,6 +139,24 @@
 			float: left;
 		}
 
+.spinner {
+	display: none;
+	position: absolute;
+	background: url("media/LevelFinishArt02.png");
+	background-size: 100% 100%;
+	width: 1600px;
+	height: 1200px;
+	left: -400px;
+	top: -300px;
+    -webkit-animation: rotation 5s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+    from {-webkit-transform: rotate(0deg);}
+    to   {-webkit-transform: rotate(359deg);}
+}
+
+
 		.boost-fill {
 			height: 100%;
 			width: 70%;
@@ -150,7 +185,7 @@ background-image: -webkit-gradient(
 	$(function(){
 		$(document).ready(function(){
 			$('.play').on('click', function(){
-				$('#menu').hide(); 
+				$('#menu').removeClass('showend').hide(); 
 				setTimeout(function(){
 					ig.game.start(); 
 				})
@@ -166,11 +201,20 @@ background-image: -webkit-gradient(
 </head>
 <body>
 	<div id="menu">
+		<div class="spinner">
+		</div>
 		<div class="title"></div>
-		<div class="button-container">
-			<div class="button play">Play</div>
-			<div class="button controls"></div>
-			<div class="button credits"></div>
+		<div class="start">
+			<div class="button-container">
+				<div class="button play">Play</div>
+			</div>
+		</div>
+
+		<div class="end">
+			<div class="button-container">
+				<div class="button play">Replay</div>
+				<div class="button credits">Credits</div>
+			</div>
 		</div>
 	</div>
 	<div id="hudoverlay">
